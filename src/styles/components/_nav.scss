@@ -1,0 +1,89 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.nav-header {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    // grid-template-rows: 50px auto;
+    // grid-template-areas: "logo btn"
+    //                      "nav  nav";
+    grid-template-areas: "logo btn";
+}
+
+.logo {
+    grid-template-areas: logo;
+}
+
+
+nav {
+    // locally scoped variable
+    $height: 40px;
+    $border: 1px solid white;
+    
+    background-color: $brand-color-dark;
+    display: none;
+    grid-template-areas: btn;
+
+    .show & {
+        display: block;
+    }
+
+    ul {
+        @include flatten(true);
+    }
+
+    a {
+        display: block;
+        line-height: 500px;
+        border-top: $border;
+        color: $text-color-light;
+        line-height: $height;
+        text-align: center;
+        font-size: 1.2em;
+        text-decoration: none;
+        outline: none;
+        
+        #{$lps} {
+            background-color: rgba(white, 0.3);
+        }
+    }
+
+    @include mq($phoneLandscape) {
+
+        // .nav-header {
+        //     display: grid;
+        //     grid-template-columns: 2fr 4fr;
+        //     // grid-template-rows: 50px auto;
+        //     // grid-template-areas: "logo btn"
+        //     //                      "nav  nav";
+        //     grid-template-areas: "logo btn";
+        // }
+        
+        // .logo {
+        //     grid-template-areas: logo;
+        // }
+    
+        display: block;
+        height: $height;
+        border-top: $border;
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            flex: 1;
+        }
+
+        a {
+            line-height: $height;
+            border-right: $border;
+            border-top: $border;
+            @at-root nav li:last-child a {
+                border-right: none;
+            }
+        }
+        
+    }
+
+}

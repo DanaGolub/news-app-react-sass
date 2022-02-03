@@ -1,0 +1,37 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+
+.hero-row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border: 2px solid black;
+
+    .hero-left,
+    .hero-right {
+        flex: 1;
+        margin: 0;
+        // border: 2px solid red;
+        text-align: center;
+    }
+
+    .hero-img {
+        max-width: 600px;
+        margin: 0;
+        display: block;
+    }
+
+    // @include mq($phoneLandscape){
+    //     .some-row {
+    //         @include flex-layout-row;
+    //         gap: em(20);
+    //     }
+    //     .a-01,
+    //     .a-02 {
+    //         flex: 1;
+    //         margin-bottom: 0;
+    //     }
+    // }
+
+}
