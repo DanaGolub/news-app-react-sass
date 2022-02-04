@@ -10,14 +10,21 @@
 
     .hero-left,
     .hero-right {
-        flex: 1;
         margin: 0;
         // border: 2px solid red;
         text-align: center;
     }
 
+    .hero-left {
+        flex: 3;
+    }
+
+    .hero-right {
+        flex: 1;
+    }
+
     .hero-img {
-        max-width: 600px;
+        // max-width: 600px;
         margin: 0;
         display: block;
     }

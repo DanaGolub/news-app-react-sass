@@ -4,8 +4,12 @@
 header {
     background-color: red;
     padding: em(15) em(30);
-    @include flex-layout-row;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    // position: relative;
+    font-family: 'Open Sans', sans-serif;
+    // color: black;
 
     h1 {
         @include flatten;
@@ -13,6 +17,37 @@ header {
         font-size: em(26);
         @include mq($phoneLandscape){
             font-size: em(32);
+        }
+    }
+
+    @include mq($phoneLandscape){
+
+
+        // .show .primary-navlist {
+        //     flex: 1;
+        //     position: absolute;
+        //     // top: 1px;
+
+        // }
+
+        .hamburger {
+            order: 9000;
+            background-color: red;
+            display: block;
+        }
+
+        .btn-menu {
+            flex: 1;
+
+            padding: 13px;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: black;
+            background-color: white;
+        }
+        .logo {
+            flex: 1;
         }
     }
 
