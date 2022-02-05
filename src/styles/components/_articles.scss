@@ -2,6 +2,7 @@
 @use '../utilities/mixins' as *;
 
 @include mq($phonePortrait) {
+    
     .article-container {
         display: grid;
         // grid-template-columns: 1fr 1fr 1fr;
@@ -21,9 +22,7 @@
         border: 1px dotted grey;
         // padding: 10px;
         position: relative;
-        // max-width: 990px;
-        // display: grid;
-        // grid-template-columns: 1fr 1fr;
+        display: flex;
     }
     
     .img-article-container {
@@ -33,9 +32,8 @@
         margin-bottom: 10px;
         position: relative;
         aspect-ratio: 5 / 3;
-        width: 100%;
-        // border: 15px dotted green;
         // width: 100%;
+        flex: 1;
     }
     .img-article {
         // width: 100%;
@@ -48,6 +46,11 @@
         top: 0;
         left: 0;
     }
+
+    .article-info {
+        flex: 2;
+    }
+
 }
 @include mq($phoneLandscape) {
     .article-container {
@@ -94,11 +97,12 @@
     // padding: 10px;
     position: relative;
     // max-width: 990px;
+    display: block;
 }
 
 .img-article-container {
     // display: block;
-    display: inline-block;
+    display: block;
     margin: 0;
     margin-bottom: 10px;
     position: relative;
@@ -109,7 +113,6 @@
 }
 .img-article {
     // width: 100%;
-    display: block;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -117,6 +120,9 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+.article-info {
+    display: block;
 }
 }
 
