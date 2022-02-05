@@ -14,12 +14,11 @@ function IndividualArticle({ article }) {
                 } */}
                 <img src={article.urlToImage} alt="no image" className="img-article" />
             </figure>
-            {/* <div className='article-info'> */}
+            <div className='article-info'>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
             <a href={article.url}>Read More...</a>
-            {/* 
-                </div> */}
+                </div>
         </article>
     )
 }
