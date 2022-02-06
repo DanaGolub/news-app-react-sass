@@ -1,7 +1,7 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-@include mq($phonePortrait) {
+// @include mq($phonePortrait) {
     
     .article-container {
         display: grid;
@@ -26,20 +26,19 @@
     }
     
     .img-article-container {
-        // display: block;
-        display: inline-block;
+        display: block;
+        margin-bottom: 0px;
+        // display: inline-block;
         margin: 0;
-        margin-bottom: 10px;
         position: relative;
         aspect-ratio: 5 / 3;
-        // width: 100%;
+        width: 100%;
         flex: 1;
     }
     .img-article {
         // width: 100%;
         display: block;
         object-fit: cover;
-        width: 100%;
         height: 100%;
         display: block;
         position: absolute;
@@ -51,11 +50,11 @@
         flex: 2;
     }
 
-}
+// }
 @include mq($phoneLandscape) {
     .article-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-content: space-between;
         column-gap: 1rem;
         row-gap: 1rem;

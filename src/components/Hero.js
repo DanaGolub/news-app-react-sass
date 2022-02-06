@@ -1,6 +1,12 @@
-function Hero( {heroArt}) {
+function Hero( {heroArt, heroTitle, useState}) {
+    // console.log(heroArt)
+    // let articleTitle = heroArt.title
+    // console.log(articleTitle)
+    // let articleHyphenIndex = articleTitle.lastIndexOf('-')
+    // let articleTitleCropped = articleTitle.slice(0, articleHyphenIndex)
+    // const [title, setTitle] = useState(articleTitleCropped);
+    // const [title, setTitle] = useState(articleTitleCropped);
 
-    console.log(heroArt.title)
     return (
         <article className="hero-row">
             <figure className="hero-left">
@@ -10,8 +16,9 @@ function Hero( {heroArt}) {
                 alt="hero banner" />
             </figure>
             <div className="hero-right">
-            <h2>{heroArt.title}</h2>
-            {/* <h2>{heroTitle}</h2> */}
+            {/* <h2>{heroArt.title}</h2> */}
+            <h2>{heroTitle}</h2>
+            {/* <h2>{title}</h2> */}
             <a href={heroArt.url}>Read More...</a>
             </div>
         </article>
