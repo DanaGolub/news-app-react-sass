@@ -24,7 +24,7 @@ function PageHome() {
 
       let firstArticle = Data.articles[0]
       let articleTitle = firstArticle.title
-      let articleHyphenIndex = articleTitle.lastIndexOf('-')
+      let articleHyphenIndex = articleTitle.indexOf('-')
       let articleTitleCropped = articleTitle.slice(0, articleHyphenIndex)
       //setting title for Hero article from main page
       setTitle(articleTitleCropped)
@@ -33,6 +33,7 @@ function PageHome() {
       //setting an array of objects of 12 articles to send to Hero component
       let articlesData = (Data.articles).splice(1, 12)
       setArticles(articlesData)
+      console.log(articlesData)
     }
     fetchData();
   }, [])

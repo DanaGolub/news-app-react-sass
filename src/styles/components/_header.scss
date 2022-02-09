@@ -3,6 +3,7 @@
 
 header {
     background-color: red;
+    // border: 2px solid red;
     padding: em(15) em(30);
     display: flex;
     justify-content: space-between;
@@ -33,6 +34,7 @@ header {
         .hamburger {
             order: 9000;
             background-color: red;
+            border: 2px solid red;
             display: block;
         }
 

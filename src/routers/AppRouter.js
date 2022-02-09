@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Nav from '../components/Nav';
 // import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
+import Footer from '../components/Footer';
 
 function AppRouter() {
   return (
@@ -11,7 +12,7 @@ function AppRouter() {
         <Header />
         {/* <Nav /> */}
         <PageHome />
-        {/* <Footer /> */}
+        <Footer/>
       </div>
     </BrowserRouter>
     )
