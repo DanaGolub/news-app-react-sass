@@ -10,7 +10,6 @@ function AppRouter() {
     <BrowserRouter>
       <div className="wrapper">
         <Header />
-        {/* <Nav /> */}
         <PageHome />
         <Footer/>
       </div>

@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// import SectionInfo from '../components/SectionInfo';
-// import SectionGallery from '../components/SectionGallery';
-// import SectionSales from '../components/SectionSales';
-// import SectionStuff from '../components/SectionStuff';
 import Data from "../top-headlines.json";
 import Articles from "../components/Articles"
 import Header from "../components/Header"
@@ -19,7 +15,10 @@ function PageHome() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // const res = await fetch(`https://api.themoviedb.org/3/movie/${chosenMovCategory}?api_key=${API_KEY}&language=en-US&page=1`);
+
+      // e6f94eb56d1a476a9a4c2ca75914e1b5
+
+      // const res = await fetch(`https://newsapi.org/v2/top-headlines?country=ca&apiKey=e6f94eb56d1a476a9a4c2ca75914e1b5`);
       // const data = await res.json();
 
       let firstArticle = Data.articles[0]
@@ -40,10 +39,8 @@ function PageHome() {
 
   return (
     <main>
-      {/* <Header /> */}
       {heroArticle !== null && <Hero heroArt={heroArticle} heroTitle={title} />}
       {articles !== null && <Articles articles={articles} />}
-      {/* {articles !== null && console.log(articles)} */}
     </main>
   )
 }

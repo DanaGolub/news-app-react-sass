@@ -20,15 +20,11 @@ function isDesktop(e) {
 }
 
 useEffect(() => {
-    let mediaQuery = window.matchMedia('(min-width: 670px)');
+    let mediaQuery = window.matchMedia('(min-width: 680px)');
     mediaQuery.addEventListener('change', isDesktop);
     // this is the cleanup function to remove the listener
     return () => mediaQuery.removeEventListener('change', isDesktop);
 }, []);
-
-
-
-
 
 
   return (
@@ -38,8 +34,8 @@ useEffect(() => {
                 id="hamburger" 
                 onClick={openNav}
                 onMouseDown={preventFocus}>
-        <a href="#main-nav" class="btn-menu" id="btn-menu">More</a>
-
+        <a href="#main-nav" class="btn-menu-smscreen" id="btn-menu">Sections</a>
+        <a href="#main-nav" class="btn-menu-lscreen" id="btn-menu">More</a>
         </span>
         <Nav/>
       {/* </div> */}

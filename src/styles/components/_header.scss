@@ -2,45 +2,51 @@
 @use '../utilities/mixins' as *;
 
 header {
-    background-color: red;
-    // border: 2px solid red;
+    background-color: $brand-color;
     padding: em(15) em(30);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // position: relative;
     font-family: 'Open Sans', sans-serif;
-    // color: black;
+    display: flex;
+    flex-wrap: wrap;
 
     h1 {
         @include flatten;
         color: $text-color-light;
-        font-size: em(26);
         @include mq($phoneLandscape){
             font-size: em(32);
         }
     }
 
-    @include mq($phoneLandscape){
+    .btn-menu-lscreen {
+        display: none;
+    }
+
+    .btn-menu-smscreen {
+        flex: 1;
+        display: block;
+        padding: 13px;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: black;
+        background-color: white;
+    }
 
 
-        // .show .primary-navlist {
-        //     flex: 1;
-        //     position: absolute;
-        //     // top: 1px;
-
-        // }
+    @include mq($tabletPortrait){
 
         .hamburger {
             order: 9000;
-            background-color: red;
-            border: 2px solid red;
+            background-color: $brand-color;
+            border: 2px solid $brand-color;
             display: block;
         }
 
-        .btn-menu {
+        .btn-menu-lscreen {
             flex: 1;
-
+            display: block;
             padding: 13px;
             font-weight: bold;
             font-family: 'Open Sans', sans-serif;
@@ -48,6 +54,11 @@ header {
             color: black;
             background-color: white;
         }
+
+        .btn-menu-smscreen {
+            display: none;
+        }
+
         .logo {
             flex: 1;
         }
