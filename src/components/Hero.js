@@ -1,11 +1,4 @@
-function Hero( {heroArt, heroTitle, useState}) {
-    // console.log(heroArt)
-    // let articleTitle = heroArt.title
-    // console.log(articleTitle)
-    // let articleHyphenIndex = articleTitle.lastIndexOf('-')
-    // let articleTitleCropped = articleTitle.slice(0, articleHyphenIndex)
-    // const [title, setTitle] = useState(articleTitleCropped);
-    // const [title, setTitle] = useState(articleTitleCropped);
+function Hero( {heroArt, heroTitle}) {
 
     return (
         <article className="hero-row">

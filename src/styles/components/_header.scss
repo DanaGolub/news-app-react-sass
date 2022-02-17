@@ -10,6 +10,7 @@ header {
     font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 
     h1 {
         @include flatten;
@@ -31,7 +32,7 @@ header {
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
         color: black;
-        background-color: white;
+        background-color: $navlist-btns-bg-color;
     }
 
 
@@ -52,7 +53,7 @@ header {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
             color: black;
-            background-color: white;
+            background-color: $navlist-btns-bg-color;
         }
 
         .btn-menu-smscreen {

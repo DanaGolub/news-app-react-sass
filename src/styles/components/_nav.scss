@@ -1,49 +1,34 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-@media (max-width: 850px){
 
-    nav {
-        .show & {
-        position: fixed;
+nav {
+    display: none;
+    position: absolute;
+
+    top: 60px;
+    right: 20px;
+    .show & {
+        display: flex;
     }
-}
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 
     .btn-menu-smscreen {
         position: relative;
     }
-        .primary-navlist {
-        display: none;
-        .show & {
-            display: block;
-            position: absolute;
-            // top: -100px;
-            // left: 275px;
+
+    @include mq($tabletPortrait) {
+        display: block; 
+        position: static;
+        
     }
 }
-        .secondary-navlist {
-            display: none;
-            .show & {
-                display: block;
-                position: absolute;
-                // top: 59px;
-                // left: 600px;
-        }
-}
 
-
-.primary-navlist 
-    {
-        display: none;
-        .show & {
-            display: block;
-            position: absolute;
-            top: 70px;
-            left: 400px;
-            ul {
-                top: -45px;
-                left: -156px;
-            }
+.primary-navlist { 
             li{
                 padding: 10px;
                 font-weight: bold;
@@ -55,20 +40,26 @@
             a {
                 color: black;
             }
+    @include mq($tabletPortrait) {
+        li{
+            padding: 10px;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            background-color: $brand-color;
+            border: none;
+            position: static;
         }
+        a {
+            color: $navlist-btns-bg-color;
+        }
+     }
 }
 
 .secondary-navlist {
     display: none;
     .show & {
         display: block;
-        position: absolute;
-        top: 59px;
-        left: 500px;
-        ul {
-            top: -50px;
-            left: -166px;
-        }
+  
         li{
             padding: 10px;
             font-weight: bold;
@@ -83,21 +74,19 @@
     }
 }
 
-}
+
 
  nav {
      display: none;
 
     .show & {
-        display: block;
+        // position: absolute;
         z-index: 9999;
         // position: fixed;
     }
 
     ul {
-        position: absolute;
         list-style: none;
-        // flex: 0;
     }
 
     li a {
@@ -112,10 +101,6 @@
 
     a {
         display: block;
-        line-height: 50px;
-        // border-top: $border;
-        // color: $text-color-light;
-        // line-height: $height;
         text-align: center;
         font-size: 1.2em;
         text-decoration: none;
@@ -130,9 +115,7 @@
         display: none;
         .show & {
             display: block;
-            position: absolute;
-            top: 59px;
-            left: 675px;
+            // position: absolute;
             li{
                 padding: 10px;
                 font-weight: bold;
@@ -173,11 +156,11 @@
 
         .secondary-navlist {
             display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
             .show & {
                 display: block;
-                position: absolute;
-                top: 59px;
-                left: 675px;
                 li{
                     padding: 10px;
                     font-weight: bold;

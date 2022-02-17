@@ -38,7 +38,6 @@ useEffect(() => {
         <a href="#main-nav" class="btn-menu-lscreen" id="btn-menu">More</a>
         </span>
         <Nav/>
-      {/* </div> */}
     </header>
   )
 }

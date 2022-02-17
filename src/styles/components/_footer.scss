@@ -4,5 +4,8 @@
 footer {
     position: static;
     background-color: $brand-color;
-
+    color: $text-color-light;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
 }

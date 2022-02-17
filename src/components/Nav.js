@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 function Nav() {
+    
 
     function closeNav() {
         document.body.classList.remove('show');

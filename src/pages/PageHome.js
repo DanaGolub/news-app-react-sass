@@ -18,8 +18,8 @@ function PageHome() {
 
       // e6f94eb56d1a476a9a4c2ca75914e1b5
 
-      // const res = await fetch(`https://newsapi.org/v2/top-headlines?country=ca&apiKey=e6f94eb56d1a476a9a4c2ca75914e1b5`);
-      // const data = await res.json();
+      const res = await fetch(`https://newsapi.org/v2/top-headlines?country=ca&apiKey=e6f94eb56d1a476a9a4c2ca75914e1b5`);
+      const data = await res.json();
 
       let firstArticle = Data.articles[0]
       let articleTitle = firstArticle.title
